@@ -94,7 +94,7 @@ angular.module('schnapApp')
                     var data=this.responseText;
                     var jsonResponse = JSON.parse(data);
 
-                    for (var i = 0; i < jsonResponse.length; i++) {
+                    for (var i = 0; i < jsonResponse[0].wardrobe.length; i++) {
                         if (jsonResponse[0].wardrobe[i].type == "shirt") {
                             $scope.shirts.push(jsonResponse[0].wardrobe[i]);
                         } else {
