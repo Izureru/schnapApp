@@ -6,33 +6,48 @@
 
 body {
   margin: 0px;
+  font-family: sans-serif;
+}
+
+.default, .oh_snap, .so_snap, .no_snap {
+    background: #00ACC1;
+    color: #FFF;
+    height: 6em;
+    padding-top: 1px;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 .default {
     background: #00ACC1;
-    color: #FFF;
-    height: 5em;
-    padding-top: 1px;
-    position: relative;
-    text-align: center;
-    width: 100%;
 }
 
 .oh_snap {
     background: #CD362C;
-    color: #FFF;
-    height: 5em;
-    padding-top: 1px;
-    position: relative;
-    text-align: center;
-    width: 100%;
 }
 
+.so_snap {
+    background: #FF8800;
+}
+
+.no_snap {
+    background: #669900;
+}
 
 .wardrobe {
   float: left;
-  margin-top: 1.3em;
-  margin-left: 1.5em;
+  margin-top: 1.7em;
+  margin-left: 1em;
+  position: relative;
+  width: 3em;
+  z-index: 2;
+}
+
+.emptyIcon {
+  float: right;
+  margin-top: 1.7em;
+  margin-right: 1em;
   position: relative;
   width: 3em;
   z-index: 2;
@@ -42,13 +57,14 @@ p {
   text-align: center;
   width: 100%;
   z-index: 3;
-  margin-top: -25px;
-  margin-left: -70px;
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
   margin-top: 15px;
-  margin-right: 70px;
+  margin-right: 65px;
 }
 
 .mirrorWrapper
