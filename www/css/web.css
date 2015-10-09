@@ -1,0 +1,148 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+//WEB
+
+/*@media only screen and (min-width: 895px) {*/
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#banner h1 {
+    border-bottom: none;
+    margin-top: -20px;
+    max-width: 100%;
+}
+
+.default {
+    background: #4DADC1;
+    color: #FFF;
+    height: 3.5em;
+    padding-top: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 6em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.oh_snap {
+    background: #CD362C;
+    color: #FFF;
+    height: 3.5em;
+    padding-top: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 6em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.so_snap {
+    background: #EF8733;
+    color: #FFF;
+    height: 3.5em;
+    padding-top: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 6em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.no_snap {
+    background: #669906;
+    color: #FFF;
+    height: 3.5em;
+    padding-top: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 6em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+p {
+  margin-right: 11%;
+  text-align: center;
+  width: 95%;
+  z-index: 3;
+}
+
+.wardrobe {
+  float: left;
+  margin-top: 0.5em;
+  margin-left: 1.5em;
+  position: absolute;
+  width: 4em;
+  z-index: 2;
+}
+
+.settings {
+  float: right;
+  margin-top: 1em;
+  margin-right: 1.5em;
+  position: relative;
+  width: 4em;
+  z-index: 3;
+}
+
+.images {
+  position: relative;
+}
+
+.mirror {
+  margin-left: 20.5%;
+  padding-top: 2em;
+  position: absolute;
+  width: 60%;
+  z-index: 2;
+}
+
+.topImage{
+  width: 32%;
+  z-index: 5;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 32%;
+}
+
+.bottomImage{
+  width: 32%;
+  z-index: 5;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 69%;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+}
+
+.profile {
+  float: left;
+  margin-top: -5.5em;
+  margin-left: 1.5em;
+  position: absolute;
+  width: 5em;
+  z-index: 2;
+}
+
+.diary {
+  float: right;
+  margin-top: -5.5em;
+  margin-right: 1.5em;
+  position: relative;
+  width: 5em;
+  z-index: 3;
+}
+
+/*}*/

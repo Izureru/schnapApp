@@ -6,6 +6,8 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 //MOBILE
 
+/*@media only screen and (min-width: 320px) and (max-width: 894px) {*/
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -68,9 +70,9 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 }
 
 p {
-  position: absolute;
+  margin-right: 11%;
   text-align: center;
-  width: 60%;
+  width: 95%;
   z-index: 3;
 }
 
@@ -143,56 +145,4 @@ p {
   z-index: 3;
 }
 
-
-
-// .thing-form {
-//     margin: 20px 0;
-// }
-
-// .hero-unit {
-//     position: relative;
-//     padding: 30px 15px;
-//     color: #F5F5F5;
-//     text-align: center;
-//     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-//     background: #21b900;
-// }
-
-// .hero-unit2 {
-//   position: relative;
-//   padding: 30px 15px;
-//   color: #F5F5F5;
-//   text-align: center;
-//   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-//   background: #b91307;
-// }
-
-// .footer {
-//     text-align: center;
-//     padding: 30px 0;
-//     margin-top: 70px;
-//     border-top: 1px solid #E5E5E5;
-// }
-
-// #mirror_frame{
-//   background: url('/images/mirror_bg.png') top left no-repeat;
-//   height: 925px;
-//   width: 880px;
-//   background-repeat: no-repeat;
-//   z-index:1;
-// }
-
-// #mirror{
-//   background: url('/images/mirror_frame.png') top left no-repeat;
-//   height: 1100px;
-//   width: 1000px;
-//   background-repeat: no-repeat;
-//   z-index:-1;
-//   padding-left:8.1em;
-//   padding-top:24em;
-// }
-
-// #view{
-//   padding-top: 0em;
-//   padding-left: 20em;
-// }
+/*}*/

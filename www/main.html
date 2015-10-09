@@ -3,9 +3,6 @@
     <a href="">
         <img class="wardrobe" src="images/wardrobe_btn.png">
     </a>
-    <a href="">
-        <img class="settings" src="images/settings_btn.png">
-    </a>
 
     <div class="oh_snap" ng-show="redLight">
         <h1>Oh SNAP</h1>
@@ -20,7 +17,7 @@
         <p>There is a 10% chance someone is wearing your gearing</p>
     </div>
 
-    <div class="default_girl" ng-hide="redLight||greenLight||amberLight">
+    <div class="default" ng-hide="redLight||greenLight||amberLight">
         <h1>SCHNAP</h1>
         <p>Click below to check your flow</p>
     </div>
@@ -30,13 +27,6 @@
         <span>
             <img class="topImage" ng-click="shirtCycle()" ng-src="images/{{currentShirt.image}}" />
             <img class="bottomImage" ng-click="trouserCycle()" ng-src="images/{{currentTrouser.image}}"/>
-        <img class="background" src="images/background.png">
-        <a href="">
-          <img class="profile" src="images/profile_btn.png">
-        </a>
-        <a href="">
-          <img class="diary" src="images/diary_btn.png">
-        </a>
       </span>
     </div>
 
