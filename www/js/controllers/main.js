@@ -47,7 +47,7 @@ angular.module('schnapApp')
         }
 
         $scope.shirtCycle = function() {
-            $scope.getUsers();
+           
             var shirtIndex = $scope.shirts.indexOf($scope.currentShirt);
             if (shirtIndex != -1) {
                 var slength = $scope.shirts.length;
@@ -245,5 +245,5 @@ angular.module('schnapApp')
             socket.unsyncUpdates('thing');
         });
 
-
+ $scope.getUsers();
     });
