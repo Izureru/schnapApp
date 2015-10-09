@@ -1,5 +1,9 @@
 //ALL
 
+#banner {
+  max-width: 100%;
+}
+
 body {
   margin: 0px;
   font-family: sans-serif;
