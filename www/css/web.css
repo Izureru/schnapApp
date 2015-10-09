@@ -11,16 +11,27 @@ body {
 .default {
     background: #00ACC1;
     color: #FFF;
-    height: 3.5em;
+    height: 5em;
     padding-top: 1px;
     position: relative;
     text-align: center;
-    width:100%;
+    width: 100%;
 }
+
+.oh_snap {
+    background: #CD362C;
+    color: #FFF;
+    height: 5em;
+    padding-top: 1px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
 
 .wardrobe {
   float: left;
-  margin-top: 0.5em;
+  margin-top: 1.3em;
   margin-left: 1.5em;
   position: relative;
   width: 3em;
@@ -36,30 +47,44 @@ p {
 }
 
 h1 {
-  margin-top: 1px;
+  margin-top: 15px;
   margin-right: 70px;
 }
 
-.mirror {
-  margin-left: 20.5%;
+.mirrorWrapper
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 2em;
+  width: 15em;
+  z-index: 2;
+}
+
+.mirror {
   position: absolute;
   width: 15em;
   z-index: 2;
 }
 
 .topImage{
-  width: 40%;
+  width: 10em;
   z-index: 5;
-  position: absolute;
-  margin-left: 30%;
-  margin-top: 28%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4.5em;
+  display: block;
 }
 
 .bottomImage{
-  width: 40%;
+  width: 11em;
   z-index: 5;
-  position: absolute;
-  margin-left: 30%;
-  margin-top: 74%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
+
+
+
