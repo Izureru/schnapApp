@@ -10,13 +10,9 @@
 angular.module('schnapApp')
     .controller('MainCtrl', function($scope, $http) {
 
-        $scope.shirts = [""];
-        $scope.trousers = [""];
-        $scope.reset = function() {
-            $scope.greenLight = false;
-            $scope.amberLight = false;
-            $scope.redLight = false;
-        }
+        $scope.shirts = [];
+        $scope.trousers = [];
+
         $scope.compareUsers = function() {
             var sameShirt = 0;
             var sameTrousers = 0;
@@ -30,19 +26,12 @@ angular.module('schnapApp')
                     sameTrousers++
                 }
             }
-
             if (sameShirt > 0 && sameTrousers > 0) {
-                $scope.reset();
-
-                $scope.redLight = true;
-            } else if (sameShirt >= 1 || sameTrousers >= 1) {
-                $scope.reset();
-
-                $scope.amberLight = true;
+                $scope.setMatchResult("red","This is a 100% Match");
+            } else if (sameShirt > 0 || sameTrousers > 0) {
+                $scope.setMatchResult("amber","Do you enjoy being middle of the road?");
             } else {
-                $scope.reset();
-
-                $scope.greenLight = true;
+                $scope.setMatchResult("green","This is a <20% Match");
             }
         }
 
@@ -89,7 +78,7 @@ angular.module('schnapApp')
                 if (this.readyState === 4) {
                     console.log('Status:', this.status);
                     console.log('Headers:', this.getAllResponseHeaders());
-                    console.log('Body:', this.responseText);
+                    // console.log('Body:', this.responseText);
 
                     var data=this.responseText;
                     var jsonResponse = JSON.parse(data);
@@ -108,12 +97,20 @@ angular.module('schnapApp')
             return this.responseText;
         }
 
+        $scope.customStyle = {};
+        $scope.result = {message: ""};
+
+        $scope.setMatchResult = function(statusColor, message){
+            $scope.customStyle.colorClass = statusColor;
+            $scope.result.message = message;
+        }
+
         $scope.users = [{
             "username": "izee",
             "currentOutfit": {
                 "shirts": {
                     "color": "all",
-                    "name": "sexyhawaiishirt"
+                    "name": "T1234"
                 },
                 "trouser": {
                     "color": "blue",
@@ -133,23 +130,11 @@ angular.module('schnapApp')
                 }
             }
         }, {
-            "username": "leanne",
-            "currentOutfit": {
-                "shirts": {
-                    "color": "all",
-                    "name": "straw shirt"
-                },
-                "trouser": {
-                    "color": "blue",
-                    "name": "cargo shorts"
-                }
-            }
-        }, {
             "username": "greggers",
             "currentOutfit": {
                 "shirts": {
                     "color": "all",
-                    "name": "stripey stripes"
+                    "name": "T1234"
                 },
                 "trouser": {
                     "color": "all",
@@ -161,11 +146,11 @@ angular.module('schnapApp')
             "currentOutfit": {
                 "shirts": {
                     "color": "all",
-                    "name": "jumpy jumper"
+                    "name": "T1235"
                 },
                 "trouser": {
                     "color": "all",
-                    "name": "yuppy"
+                    "name": "T9879"
                 }
             }
         }, {
@@ -177,7 +162,7 @@ angular.module('schnapApp')
                 },
                 "trouser": {
                     "color": "all",
-                    "name": "cargo shorts"
+                    "name": "T9879"
                 }
             }
         }, {
@@ -185,11 +170,11 @@ angular.module('schnapApp')
             "currentOutfit": {
                 "shirts": {
                     "color": "all",
-                    "name": "sexyhawaiishirt"
+                    "name": "T1236"
                 },
                 "trouser": {
                     "color": "blue",
-                    "name": "jim joggers"
+                    "name": "T9877"
                 }
             }
         }, {
@@ -201,7 +186,7 @@ angular.module('schnapApp')
                 },
                 "trouser": {
                     "color": "blue",
-                    "name": "bad knees"
+                    "name": "T9877"
                 }
             }
         }, {
@@ -221,11 +206,11 @@ angular.module('schnapApp')
             "currentOutfit": {
                 "shirts": {
                     "color": "all",
-                    "name": "polo"
+                    "name": "T1234"
                 },
                 "trouser": {
                     "color": "blue",
-                    "name": "yuppy"
+                    "name": "T9877"
                 }
             }
         }]

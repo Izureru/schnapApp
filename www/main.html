@@ -4,23 +4,11 @@
         <img class="wardrobe" src="images/wardrobe_btn.png">
         <img class="emptyIcon" src="images/empty_icon.png">
     </a>
-
-    <div class="oh_snap" ng-show="redLight">
-        <h1>Oh SNAP</h1>
-        <p>Someone is wearing your gear!</p>
-    </div>
-    <div class="so_snap" ng-show="amberLight">
-        <h1>So-So SNAP</h1>
-        <p>There is a 40% chance someone is wearing your gear</p>
-    </div>
-    <div class="no_snap" ng-show="greenLight">
-        <h1>No SNAP</h1>
-        <p>There is a 10% chance someone is wearing your gear</p>
-    </div>
-
-    <div class="default" ng-hide="redLight||greenLight||amberLight">
+    
+    <div class="schnap" ng-class="customStyle.colorClass">
         <h1>SCHNAP</h1>
         <p>Tap below to check your flow</p>
+        <p>{{result.message}}</p>
     </div>
 
     <div class="mirrorWrapper">
