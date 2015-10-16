@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
 }
 
-.default, .schnap {
+.default {
     background: #00ACC1;
     color: #FFF;
     height: 6em;
@@ -21,15 +21,18 @@ body {
     background: #00ACC1;
 }
 
-.green{
-  background: #669900;
-}
-.red{
+.oh_snap {
   background: #CD362C;
 }
-.amber{
-  background:#FF8800;
+
+.so_snap {
+  background: #FF8800;
 }
+
+.no_snap {
+  background: #669900;
+}
+
 .wardrobe, .emptyIcon {
   float: left;
   margin-top: 1.7em;

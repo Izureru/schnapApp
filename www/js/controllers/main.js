@@ -27,11 +27,11 @@ angular.module('schnapApp')
                 }
             }
             if (sameShirt > 0 && sameTrousers > 0) {
-                $scope.setMatchResult("red","This is a 100% Match");
+                $scope.setMatchResult("oh_snap","This is a 100% Match");
             } else if (sameShirt > 0 || sameTrousers > 0) {
-                $scope.setMatchResult("amber","Do you enjoy being middle of the road?");
+                $scope.setMatchResult("so_snap","Do you enjoy being middle of the road?");
             } else {
-                $scope.setMatchResult("green","This is a <20% Match");
+                $scope.setMatchResult("no_snap","This is a <20% Match");
             }
         }
 
