@@ -17,20 +17,16 @@ body {
     width: 100%;
 }
 
-.default {
-    background: #00ACC1;
-}
-
 .oh_snap {
-    background: #CD362C;
+  background: #CD362C;
 }
 
 .so_snap {
-    background: #FF8800;
+  background: #FF8800;
 }
 
 .no_snap {
-    background: #669900;
+  background: #669900;
 }
 
 .wardrobe, .emptyIcon {
