@@ -78,7 +78,6 @@ angular.module('schnapApp')
                 if (this.readyState === 4) {
                     console.log('Status:', this.status);
                     console.log('Headers:', this.getAllResponseHeaders());
-                    // console.log('Body:', this.responseText);
 
                     var data=this.responseText;
                     var jsonResponse = JSON.parse(data);

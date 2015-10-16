@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
 }
 
-.default {
+.default, .oh_snap, .so_snap, .no_snap {
     background: #00ACC1;
     color: #FFF;
     height: 6em;
@@ -15,10 +15,6 @@ body {
     position: relative;
     text-align: center;
     width: 100%;
-}
-
-.default {
-    background: #00ACC1;
 }
 
 .oh_snap {
