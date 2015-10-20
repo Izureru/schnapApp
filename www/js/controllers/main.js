@@ -16,22 +16,31 @@ angular.module('schnapApp')
         $scope.compareUsers = function() {
             var sameShirt = 0;
             var sameTrousers = 0;
+            var pwys = 0;
+            var pwyt = 0;
+            var pwyca = 0;
+            var mnscoef = 0;
 
             for (var i = 0; i < $scope.users.length; i++) {
                 if ($scope.currentShirt.name == $scope.users[i].currentOutfit.shirts.name) {
-                    sameShirt++
+                    sameShirt++;
+                    pwys++;
                 }
 
                 if ($scope.currentTrouser.name == $scope.users[i].currentOutfit.trouser.name) {
                     sameTrousers++
+                    pwyt++;
                 }
+                pwyca = (((pwys/$scope.users.length) + (pwyt/$scope.users.length)/2) * 100);
+                mnscoef = 100 - pwyca;
+
             }
             if (sameShirt > 0 && sameTrousers > 0) {
-                $scope.setMatchResult("oh_snap","This is a 100% Match");
+                $scope.setMatchResult("oh_snap", Math.round(mnscoef));
             } else if (sameShirt > 0 || sameTrousers > 0) {
-                $scope.setMatchResult("so_snap","Do you enjoy being middle of the road?");
+                $scope.setMatchResult("so_snap", Math.round(mnscoef));
             } else {
-                $scope.setMatchResult("no_snap","This is a <20% Match");
+                $scope.setMatchResult("no_snap", Math.round(mnscoef));
             }
         }
 
@@ -97,11 +106,11 @@ angular.module('schnapApp')
         }
 
         $scope.customStyle = {};
-        $scope.result = {message: ""};
+        $scope.mnscoef = {};
 
-        $scope.setMatchResult = function(statusColor, message){
+        $scope.setMatchResult = function(statusColor, mnscoef){
             $scope.customStyle.colorClass = statusColor;
-            $scope.result.message = message;
+            $scope.mnscoef = mnscoef;
         }
 
         $scope.users = [{
