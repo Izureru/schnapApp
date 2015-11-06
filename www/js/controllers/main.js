@@ -8,10 +8,16 @@
  * Controller of the schnapApp
  */
 angular.module('schnapApp')
-    .controller('MainCtrl', function($scope, $http) {
+    .controller('MainCtrl', function($scope, $http, $location) {
 
         $scope.shirts = [];
         $scope.trousers = [];
+
+        $scope.changeView = function(view){
+            //code to change view?
+            $location.url('/coverflowPage');
+            console.log("you have been called!");
+        }
 
         $scope.compareUsers = function() {
             var sameShirt = 0;

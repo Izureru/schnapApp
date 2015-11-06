@@ -17,11 +17,15 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'main.html',
-        controller: 'MainCtrl'
+          templateUrl : 'main.html',
+          controller  : 'MainCtrl'
+      })
+      .when('/flow', {
+          templateUrl : 'coverflowPage.html',
+          controller  : 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
