@@ -19,15 +19,15 @@ angular
   ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
+      .when('/main', {
           templateUrl : 'main.html',
           controller  : 'MainCtrl'
       })
-      .when('/flow', {
+      .when('/coverflowPage', {
           templateUrl : 'coverflowPage.html',
           controller  : 'MainCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/main'
       });
   });

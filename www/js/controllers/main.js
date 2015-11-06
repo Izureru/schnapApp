@@ -231,9 +231,9 @@ angular.module('schnapApp')
             "image": "trouserClick.png"
         };
 
-        $scope.$on('$destroy', function() {
-            socket.unsyncUpdates('thing');
-        });
+        // $scope.$on('$destroy', function() {
+        //     socket.unsyncUpdates('thing');
+        // });
 
  $scope.getUsers();
     });
