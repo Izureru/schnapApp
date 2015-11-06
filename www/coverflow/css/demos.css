@@ -369,6 +369,7 @@ div.wrapper {
 }
 
 #coverflow img {
+	background-color: #fff;
 	width: 260px;
 	height: 260px;
 	float: left;
