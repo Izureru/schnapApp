@@ -14,10 +14,13 @@ angular.module('schnapApp')
         $scope.trousers = [];
 
         $scope.changeView = function(view){
-            //code to change view?
             $location.url('/coverflowPage');
             console.log("you have been called!");
         }
+
+        $scope.goBack = function() {
+            window.history.back();
+        };
 
         $scope.compareUsers = function() {
             var sameShirt = 0;

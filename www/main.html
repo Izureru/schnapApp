@@ -1,7 +1,7 @@
 <header id="banner">
 
     <a href="">
-        <img class="wardrobe" src="images/wardrobe_btn.png">
+        <img ng-click="changeView('/coverflowPage')" class="wardrobe" src="images/wardrobe_btn.png">
         <img class="emptyIcon" src="images/empty_icon.png">
     </a>
     
@@ -18,8 +18,5 @@
             <img class="bottomImage" ng-click="trouserCycle()" ng-src="images/{{currentTrouser.image}}"/>
       </span>
     </div>
-
-    <button ng-click="changeView('/coverflowPage')">Btn for cover flow page</button>
-    <!-- <button onClick="parent.location='coverflowPage.html'">Btn for cover flow page</button> -->
 
 </header>
