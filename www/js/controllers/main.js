@@ -226,7 +226,7 @@ angular.module('schnapApp')
         $scope.currentShirt = {
             "color": "all",
             "name": "clickMe",
-            "image": "clickMe2.png"
+            "image": "clickMe.png"
         };
         $scope.currentTrouser = {
             "color": "all",

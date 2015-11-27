@@ -2,11 +2,11 @@
 
 <header id="banner">
     <a href="">
-        <img  class="wardrobe" src="images/wardrobe_btn.png">
+        <img ng-click="goBack()" class="mirrorBtn" src="images/mirror_btn.png">
         <img class="emptyIcon" src="images/empty_icon.png">
     </a>
     <div class="default">
-        <h1 ng-click="goBack()">YOUR FLOW</h1>
+        <h1>YOUR FLOW</h1>
     </div>
 </header>
 
@@ -27,23 +27,28 @@
                     <img src="images/shirt_10.png" data-artist="Polo shirt" data-album="Blue" />
                 </div>
             </div>
-            <div id="imageCaption">
-                Sample Text
+            <div id='slider'></div>
+        </div>
+    </div>
+
+        <div class="pageWrapper">
+        <div class="demo">
+            <div class="wrapper">
+                <div id="coverflow">
+                    <img src="images/shorts_01.png" data-artist="Checked shirt" data-album="Blue" />
+                    <img src="images/shorts_02.png" data-artist="Short sleeved shirt" data-album="Red" />
+                    <img src="images/shorts_03.png" data-artist="Bad pattern shirt" data-album="Dark blue" />
+                    <img src="images/shorts_04.png" data-artist="High collar fleece" data-album="Navy" />
+                    <img src="images/shorts_05.png" data-artist="Bad pattern fleece" data-album="Red" />
+                    <img src="images/shorts_06.png" data-artist="Vertical stripe shirt" data-album="Gold and black" />
+                    <img src="images/shorts_07.png" data-artist="Bodywarmer" data-album="Dark blue" />
+                    <img src="images/shorts_08.png" data-artist="Thin Striped jumper" data-album="Blue and grey" />
+                    <img src="images/shorts_09.png" data-artist="Thick striped jumper" data-album="Dark green" />
+                    <img src="images/shorts_10.png" data-artist="Polo shirt" data-album="Blue" />
+                </div>
             </div>
             <div id='slider'></div>
         </div>
-        <div class="demo-description">
-        </div>
-        <div class="listholder">
-            <div id="scroll-pane">
-                <ul id="sortable">
-                </ul>
-            </div>
-            <div id="slider-wrap">
-                <div id="slider-vertical"></div>
-            </div>
-        </div>
-    </div>
     </div>
 </body>
 

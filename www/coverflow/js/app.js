@@ -60,7 +60,6 @@ $(function () {
                 }
             });
 
-            //
             this.coverflowImages.each(function (index, value) {
                 var current = $(this);
                 try {
@@ -93,8 +92,6 @@ $(function () {
             this.sliderMargin = (this.origSliderHeight - this.sliderHeight) * 0.5;
 
             //
-            this.init_mousewheel();
-            this.init_keyboard();
             this.sortable.selectable({
                 stop: function () {
                     var result = $("#select-result").empty();
@@ -157,54 +154,6 @@ $(function () {
             items.eq(itemNumber).addClass('ui-selected');
             this.setCaption(items.eq(itemNumber).html());
 
-        },
-
-        init_mousewheel: function () {
-            $('body').mousewheel(function (event, delta) {
-
-                var speed = 1,
-                    sliderVal = coverflowApp.sliderCtrl.slider("value"),
-                    coverflowItem = 0,
-                    cflowlength = $('#coverflow > *').length - 1,
-                    leftValue = 0;
-
-                //check the deltas to find out if the user has scrolled up or down 
-                if (delta > 0 && sliderVal > 0) {
-                    sliderVal -= 1;
-                } else {
-                    if (delta < 0 && sliderVal < cflowlength) {
-                        sliderVal += 1;
-                    }
-                }
-
-                leftValue = -((100 - sliderVal) * coverflowApp.difference / 100); //calculate the content top from the slider position
-                if (leftValue > 0) leftValue = 0; //stop the content scrolling down too much
-                if (Math.abs(leftValue) > coverflowApp.difference) leftValue = (-1) * coverflowApp.difference; //stop the content scrolling up beyond point desired
-                coverflowItem = Math.floor(sliderVal);
-                coverflowApp.skipTo(coverflowItem);
-
-            });
-        },
-
-        init_keyboard: function () {
-            $(document).keydown(function (e) {
-                var current = coverflowApp.sliderCtrl.slider('value');
-                if (e.keyCode == 37) {
-                    if (current > 0) {
-                        current--;
-                        coverflowApp.skipTo(current);
-                    }
-                } else {
-                    if (e.keyCode == 39) {
-                        if (current < $('#coverflow > *').length - 1) {
-                            current++;
-                            coverflowApp.skipTo(current);
-                        }
-                    }
-                }
-
-
-            })
         },
 
         generateList: function () {

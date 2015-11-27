@@ -353,19 +353,17 @@ div.wrapper {
 	overflow: hidden;
 	position: relative;
 	margin: 0 auto;
-	
 }
 
 #coverflow {
 	display: inline-block;
 	height: 600px;
 	width: 2600px;
-
 	padding: 42px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 #coverflow img {
@@ -376,8 +374,6 @@ div.wrapper {
 	position: relative;
 	box-shadow: -1px 7px 30px 14px rgba(156,156,156,1);
 	margin: -35px;
-	 -webkit-box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.7, black), to(transparent));
-
 }
 
 #demo-frame {
@@ -386,7 +382,6 @@ div.wrapper {
 
 #slider {
 	margin-top:20px;
-
 }
 
 #sortable {
@@ -418,8 +413,6 @@ div.wrapper {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDA32D), color-stop(99%,#F9731E)); /* webkit */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDA32D', endColorstr='#F9731E',GradientType=0 ); /* ie */
 	border:none;
-
-
 }
 
 .pageWrapper {
@@ -506,11 +499,3 @@ div.wrapper {
   font-size:12px;
   text-align:center;
 }
-
-
-
-
-
-
-
-
