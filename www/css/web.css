@@ -29,13 +29,19 @@ body {
   background: #669900;
 }
 
-.wardrobe, .emptyIcon {
+.wardrobeBtn, .mirrorBtn, .emptyIcon {
   float: left;
   margin-top: 1.7em;
   margin-left: 1em;
   position: relative;
   width: 3em;
   z-index: 2;
+}
+
+.mirrorBtn {
+  margin-top: 0.7em;
+  padding-left: 0.6em;
+  width: 2.5em;
 }
 
 .emptyIcon {

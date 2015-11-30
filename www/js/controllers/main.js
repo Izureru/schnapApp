@@ -8,10 +8,19 @@
  * Controller of the schnapApp
  */
 angular.module('schnapApp')
-    .controller('MainCtrl', function($scope, $http) {
+    .controller('MainCtrl', function($scope, $http, $location) {
 
         $scope.shirts = [];
         $scope.trousers = [];
+
+        $scope.changeView = function(view){
+            $location.url('/coverflowPage');
+            console.log("you have been called!");
+        }
+
+        $scope.goBack = function() {
+            window.history.back();
+        };
 
         $scope.compareUsers = function() {
             var sameShirt = 0;
@@ -217,17 +226,13 @@ angular.module('schnapApp')
         $scope.currentShirt = {
             "color": "all",
             "name": "clickMe",
-            "image": "clickMe2.png"
+            "image": "clickMe.png"
         };
         $scope.currentTrouser = {
             "color": "all",
             "name": "clickMe",
             "image": "trouserClick.png"
         };
-
-        $scope.$on('$destroy', function() {
-            socket.unsyncUpdates('thing');
-        });
 
  $scope.getUsers();
     });
